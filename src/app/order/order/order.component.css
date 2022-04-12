@@ -1,0 +1,12 @@
+.order-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F8CECC;
+    width: 760px;
+    height: 650px;
+    border: 1px solid #B85450;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
