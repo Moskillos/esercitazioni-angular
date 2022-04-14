@@ -11,19 +11,21 @@ export interface Company{
     location: Address,
 }
 
+export enum Gender{ MALE= "male", FEMALE = "female", OTHER = "other" };
+
+export enum Role{ STAFF = 'staff', STUDENT = 'student', MANAGER = 'manager', ADMIN = 'admin'};
 
 export interface User {
     id: number,
     name: string,
     surname: string,
     age: number,
-    dateOfBirth: Date,
+    dateOfBirth: string,
     address: Address,
-    role: 'staff' | 'manager' | 'student' | 'admin'
+    role: Role,
     username: string,
-    profilePhotoUrl: string,
-    companies: Company[],
-    gender: 'male' | 'female' | 'other'
+    profilePhotoUrl: string,    
+    gender: Gender
 }
 
 
