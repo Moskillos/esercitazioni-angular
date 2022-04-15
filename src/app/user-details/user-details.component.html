@@ -1,13 +1,16 @@
 <div >
-   <div class="container" *ngFor="let user of users">
+   <div class="container" *ngFor="let user of users; let i = index">
        <div>
-            <p>{{ user }}</p>
+            <p>{{ i+1 }}</p>
        </div>
        <div>
             <img src="{{ user.profilePhotoUrl }}" alt="" width="100px">
        </div>
        <div>
            <p><strong>{{ user.name }} {{user.surname}}</strong></p>
+       </div>
+       <div>
+           <p>{{ user.age }}</p>
        </div>
        <div>
            <p>{{ user.address.city}}</p>
