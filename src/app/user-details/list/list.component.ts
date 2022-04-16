@@ -1,5 +1,5 @@
 import { Component,Input, OnInit } from '@angular/core';
-import { Address } from 'src/app/models/User';
+import { User } from 'src/app/models/User';
 
 
 
@@ -9,7 +9,7 @@ import { Address } from 'src/app/models/User';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  @Input() address!: Address;
+  @Input() users!: User[];
   constructor() {          
    }
     
