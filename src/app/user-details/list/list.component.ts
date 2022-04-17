@@ -9,13 +9,19 @@ import { User } from 'src/app/models/User';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
+  
   @Input() users!: User[];
   constructor() {          
    }
-    
-
 
   ngOnInit(): void {
   }
+
+  selectUser(user:User){
+    console.log(user)
+}
+
+
+
 
 }

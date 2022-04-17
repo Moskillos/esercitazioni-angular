@@ -7,6 +7,7 @@ import { Gender, Role, User } from 'src/app/models/User'
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
+  
   users: User[] = [
     {
       id: 3487,
@@ -62,4 +63,8 @@ export class UserDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  
+
+  
+ 
 }
