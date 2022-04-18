@@ -3,6 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { UserListComponent } from './user-list/user-list.component';
 
 
 
@@ -10,6 +11,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
   declarations: [
     AppComponent,
     UserDetailsComponent,
+    UserListComponent,
     
   ],
   imports: [
