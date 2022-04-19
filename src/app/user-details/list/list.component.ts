@@ -1,5 +1,6 @@
-import { Component,Input, OnInit } from '@angular/core';
+import { Component,EventEmitter,Input, OnInit, Output } from '@angular/core';
 import { User } from 'src/app/models/User';
+
 
 
 
@@ -9,15 +10,21 @@ import { User } from 'src/app/models/User';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  
+  user!:User;
   @Input() users!: User[];
+  @Output() userDelete = new EventEmitter()
+
   constructor() {          
    }
 
   ngOnInit(): void {
   }
 
-  selectUser(user:User){
+  userDeleters(num: number){
+    this.userDelete.emit(num)
+  }
+
+  selectUser(user: User){    
     console.log(user)
 }
 

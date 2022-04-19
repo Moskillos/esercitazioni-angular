@@ -7,7 +7,7 @@ import { Gender, Role, User } from 'src/app/models/User'
   styleUrls: ['./user-details.component.css']
 })
 export class UserDetailsComponent implements OnInit {
-  
+  user!: User[];
   users: User[] = [
     {
       id: 3487,
@@ -62,9 +62,10 @@ export class UserDetailsComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
   
-
-  
- 
+  userCancel(num: number){
+      this.users = this.users.filter((user) => {
+        return user.id !== num
+      })
+  } 
 }
