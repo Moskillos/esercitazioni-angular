@@ -1,4 +1,4 @@
-<div>
+<div *ngIf="users.length < 0, else noUser">
     <div class="container" *ngFor="let user of users; let i = index" >
         <div>
              <p>{{ i+1 }}</p>
@@ -20,3 +20,7 @@
         </div>
     </div>    
  </div>
+
+ <ng-template #noUser>
+      <p>non sono presenti users</p>
+ </ng-template>

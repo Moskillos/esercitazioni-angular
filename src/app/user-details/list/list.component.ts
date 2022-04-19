@@ -14,7 +14,8 @@ export class ListComponent implements OnInit {
   @Input() users!: User[];
   @Output() userDelete = new EventEmitter()
 
-  constructor() {          
+  constructor() {   
+         
    }
 
   ngOnInit(): void {
