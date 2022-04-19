@@ -4,3 +4,16 @@
     gap: 10px;
     padding: 5px;
 }
+
+.border-admin{
+    border: 1px blue solid;
+}
+.border-staff{
+    border: 1px yellow solid;
+}
+.border-manager{
+    border: 1px green solid;
+}
+.border-student{
+    border: 1px red solid;
+}

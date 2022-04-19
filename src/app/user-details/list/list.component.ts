@@ -1,5 +1,5 @@
 import { Component,EventEmitter,Input, OnInit, Output } from '@angular/core';
-import { User } from 'src/app/models/User';
+import { User, Role } from 'src/app/models/User';
 
 
 

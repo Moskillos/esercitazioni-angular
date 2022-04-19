@@ -1,6 +1,6 @@
 <div *ngIf="users.length < 0, else noUser">
     <div class="container" *ngFor="let user of users; let i = index" >
-        <div>
+        <div [ngClass]="{'border-admin': user.role.Admin, 'border-manager': user.role.Manager,'border-staff': user.role.Staff,'border-student': user.role.Student  }">
              <p>{{ i+1 }}</p>
         </div>
         <div>
