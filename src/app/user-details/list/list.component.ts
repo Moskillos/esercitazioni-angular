@@ -18,7 +18,19 @@ export class ListComponent implements OnInit {
          
    }
 
+  
+
   ngOnInit(): void {
+  }
+
+  getColor(role: Role): string{
+    switch(role){
+      case Role.STAFF: return 'blue';
+      case Role.MANAGER: return 'red';
+      case Role.STUDENT: return 'yellow';
+      case Role.ADMIN: return 'green';
+
+    }
   }
 
   userDeleters(num: number){

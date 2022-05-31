@@ -1,26 +1,29 @@
-<div *ngIf="users.length < 0, else noUser">
-    <div class="container" *ngFor="let user of users; let i = index" >
-        <div [ngClass]="{'border-admin': user.role.Admin, 'border-manager': user.role.Manager,'border-staff': user.role.Staff,'border-student': user.role.Student  }">
-             <p>{{ i+1 }}</p>
-        </div>
-        <div>
-             <img src="{{ user.profilePhotoUrl }}" alt="" width="100px">
-        </div>
-        <div>
-            <p><strong>{{ user.name }} {{user.surname}}</strong></p>
-        </div>
-        <div>
-            <p>{{ user.age }}</p>
-        </div>
-        <div>
-            <p>{{ user.address.city}}</p>
-        </div>
-        <div>
-            <button type="button" (click)="userDeleters(user.id)">delete</button>
-        </div>
-    </div>    
- </div>
+<div>
+  <div  *ngFor="let user of users; let i = index">
+    <div class="container" *ngIf="user; else noUser" [ngStyle]="{'border-color': getColor(user.role)}">
+      <div>
+        <p>{{ i+1 }}</p>
+      </div>
+      <div>
+        <img src="{{ user.profilePhotoUrl }}" alt="" width="100px">
+      </div>
+      <div>
+        <p><strong>{{ user.name }} {{user.surname}}</strong></p>
+      </div>
+      <div>
+        <p>{{ user.age }}</p>
+      </div>
+      <div>
+        <p>{{ user.address.city}}</p>
+      </div>
+      <div>
+        <button type="button" (click)="userDeleters(user.id)">delete</button>
+      </div>
+    </div>
 
- <ng-template #noUser>
-      <p>non sono presenti users</p>
- </ng-template>
+  </div>
+</div>
+
+<ng-template #noUser>
+  <p>non sono presenti users</p>
+</ng-template>
