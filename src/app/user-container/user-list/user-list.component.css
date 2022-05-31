@@ -1,0 +1,13 @@
+.user-list{
+    background-color: #D5E8D4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #82B366;
+    height: 100%;
+}
+
+.user-single{
+    width: 100%;
+}

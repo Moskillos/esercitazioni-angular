@@ -1,17 +1,26 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppComponent } from './app.component';
-import { UserDetailsComponent } from './user-details/user-details.component';
-import { ListComponent } from './user-details/list/list.component';
-
-
+import { UserContainerComponent } from './user-container/user-container.component';
+import { OrderContainerComponent } from './order-container/order-container.component';
+import { UserListComponent } from './user-container/user-list/user-list.component';
+import { UserDetailComponent } from './user-container/user-detail/user-detail.component';
+import { UserSigleComponent } from './share/user-sigle/user-sigle.component';
+import { OrderListComponent } from './order-container/order-list/order-list.component';
+import { OrderSingleComponent } from './order-container/order-single/order-single.component';
+import { OrderDetailComponent } from './order-container/order-single/order-detail/order-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserDetailsComponent,
-    ListComponent,
+    UserContainerComponent,
+    OrderContainerComponent,
+    UserListComponent,
+    UserDetailComponent,
+    UserSigleComponent,
+    OrderListComponent,
+    OrderSingleComponent,
+    OrderDetailComponent,    
     
   ],
   imports: [

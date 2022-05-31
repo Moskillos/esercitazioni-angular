@@ -1,0 +1,24 @@
+.order-single{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #BAC8D3;
+    border: 1px solid black;
+}
+
+.order-single-content{
+    display: flex;
+    width: 100%;
+    gap: 20px;
+}
+
+.user-single{
+    width: 100%;
+}
+
+.order-detail{
+    width: 100%;
+}
