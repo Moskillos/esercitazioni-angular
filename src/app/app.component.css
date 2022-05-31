@@ -10,10 +10,14 @@
 }
 
 .app-content{
-    width: 100%;
-    display: grid;
+    width: 100%;    
     gap: 20px;
     grid-template-columns: 1fr 1fr;
     height: 100%;
+}
+
+h2{
+    margin-top: -30px;
+    margin-bottom: 30px;
 }
 

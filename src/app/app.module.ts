@@ -9,6 +9,8 @@ import { UserSigleComponent } from './share/user-sigle/user-sigle.component';
 import { OrderListComponent } from './order-container/order-list/order-list.component';
 import { OrderSingleComponent } from './order-container/order-single/order-single.component';
 import { OrderDetailComponent } from './order-container/order-single/order-detail/order-detail.component';
+import { HeaderComponent } from './share/header/header.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -20,11 +22,13 @@ import { OrderDetailComponent } from './order-container/order-single/order-detai
     UserSigleComponent,
     OrderListComponent,
     OrderSingleComponent,
-    OrderDetailComponent,    
+    OrderDetailComponent,
+    HeaderComponent,    
     
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
