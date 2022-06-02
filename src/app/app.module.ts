@@ -11,6 +11,8 @@ import { OrderSingleComponent } from './order-container/order-single/order-singl
 import { OrderDetailComponent } from './order-container/order-single/order-detail/order-detail.component';
 import { HeaderComponent } from './share/header/header.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent } from './home/home.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { AppRoutingModule } from './app-routing.module';
     OrderListComponent,
     OrderSingleComponent,
     OrderDetailComponent,
-    HeaderComponent,    
+    HeaderComponent,
+    HomeComponent,
+    NotFoundComponent,    
     
   ],
   imports: [

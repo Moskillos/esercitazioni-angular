@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-user-list',
@@ -6,10 +6,20 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./user-list.component.css']
 })
 export class UserListComponent implements OnInit {
+  openDetail = false
+  arr = [1,2,3];  
 
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onClickEvent(v: boolean){
+    this.openDetail = v
+  }
+
+  closeDetail(){
+    this.openDetail = false
   }
 
 }
