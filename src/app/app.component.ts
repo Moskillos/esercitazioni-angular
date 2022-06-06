@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { NgForm } from '@angular/forms';
+import { CounterService } from './counter.service';
 
 
 @Component({
@@ -8,5 +10,11 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'exercise';
+
+  constructor(private counter: CounterService){}
+
+  increment(){
+    this.counter.increment()
+  }
  
 }
