@@ -11,10 +11,6 @@ import { CounterService } from './counter.service';
 export class AppComponent {
   title = 'exercise';
 
-  constructor(private counter: CounterService){}
-
-  increment(){
-    this.counter.increment()
-  }
+  constructor(){}  
  
 }

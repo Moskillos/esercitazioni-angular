@@ -15,7 +15,8 @@ export class CounterService {
   }
 
   increment(num: number = 1) {
-    this.counter += num;    
+    this.counter += num;
+    console.log(this.counter)    
   }
 
   decrement(num: number = 1){
@@ -24,6 +25,7 @@ export class CounterService {
     } else {
       this.counter -= num;
     }
+    console.log(this.counter)
        
   }
     

@@ -1,0 +1,6 @@
+<form #f="ngForm" (ngSubmit)="addiction(f.value.number)">
+    <input type="number" name="number" ngModel>
+    <button type="submit" >Aggiungi</button>
+    <button type="button" (click)="subtraction(f.value.number)" >Sottrai</button>
+</form>
+
