@@ -10,7 +10,9 @@ export class ShowCounterComponent implements OnInit {
   @Input() counter!:number;
 
   constructor(private counterService: CounterService) { 
-    
+    if (this.counter <=0 ){
+      alert('il counter non può essere negativo')
+    }
   }
 
   ngOnInit(): void {
