@@ -10,7 +10,11 @@ import { CounterService } from './counter.service';
 })
 export class AppComponent {
   title = 'exercise';
-
+  counter = 0
   constructor(){}  
+
+  logCounter(event: number){
+    this.counter = event
+  }
  
 }

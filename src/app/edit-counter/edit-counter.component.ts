@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { CounterService } from '../counter.service';
 
@@ -9,6 +9,7 @@ import { CounterService } from '../counter.service';
   providers: [CounterService]
 })
 export class EditCounterComponent implements OnInit {
+  @Output() counterChanges = new EventEmitter<number>()
   
   constructor(private counterService: CounterService) { }
 
@@ -17,11 +18,12 @@ export class EditCounterComponent implements OnInit {
 
   addiction(num: number){        
     this.counterService.increment(num)
-    
+    this.counterChanges.emit(this.counterService.get())    
   }
 
   subtraction(num: number){        
     this.counterService.decrement(num)
+    this.counterChanges.emit(this.counterService.get()) 
   }
 
 }

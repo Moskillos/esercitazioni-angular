@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 import { CounterService } from '../counter.service';
 
 @Component({
@@ -7,13 +7,21 @@ import { CounterService } from '../counter.service';
   styleUrls: ['./show-counter.component.css']
 })
 export class ShowCounterComponent implements OnInit {
-  counter = 0
+  @Input() counter!:number;
 
-  constructor(private counterService: CounterService) { }
+  constructor(private counterService: CounterService) { 
+    
+  }
 
   ngOnInit(): void {
    
   }
+
+  
+
+ 
+
+  
 
   
  
