@@ -1,4 +1,5 @@
-import { AfterViewInit, Component, Input, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import {  Component, OnInit} from '@angular/core';
+import { Subscription } from 'rxjs';
 import { CounterService } from '../counter.service';
 
 @Component({
@@ -7,19 +8,17 @@ import { CounterService } from '../counter.service';
   styleUrls: ['./show-counter.component.css']
 })
 export class ShowCounterComponent implements OnInit {
-  @Input() counter!:number;
+   counter!:number;
+   
 
   constructor(private counterService: CounterService) { 
-    if (this.counter <=0 ){
-      alert('il counter non può essere negativo')
-    }
-  }
-
-  ngOnInit(): void {
    
   }
 
-  
+  ngOnInit(): void {   
+    this.counterService.get().subscribe(data => this.counter = data )
+    
+  }
 
  
 
