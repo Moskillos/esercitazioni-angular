@@ -4,18 +4,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { ShowCounterComponent } from './show-counter/show-counter.component';
 import { EditCounterComponent } from './edit-counter/edit-counter.component';
-
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
     AppComponent,
     ShowCounterComponent,
-    EditCounterComponent,
-  
+    EditCounterComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+     
   ],
   providers: [],
   bootstrap: [AppComponent]
