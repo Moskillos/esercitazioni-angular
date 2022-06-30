@@ -1,21 +1,28 @@
 import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
-import { CounterService } from './counter.service';
+import { ItemService } from './item.service';
+
 
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  providers: [CounterService]
+
 })
 export class AppComponent implements OnInit{
   title = 'exercise';
-  
-  constructor(private counterService: CounterService){}  
+  array:any[] = [];
+  constructor(private itemService: ItemService){
+    this.items()
+  }
 
   ngOnInit(): void {
-   
+    this.itemService.items$.subscribe(
+      value => this.array = value
+    )
   }
- 
+
+  items(){
+  }
+
 }
