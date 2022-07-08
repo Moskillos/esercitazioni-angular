@@ -6,20 +6,18 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class CounterService {
-  number: number = 0
-  counter = new BehaviorSubject<number>(this.number);   
-  
+  private counter: number = 0
+
   constructor() { }
 
-  get(){
-    return this.counter.asObservable()
+  get(): number{
+    return this.counter
   }
 
-  update(num: number){
-    this.number = num
-    this.counter.next(this.number)   
-    
+  update(num: number = 1): void{
+    this.counter = num
+    console.log(this.counter)
   }
-    
+
 
 }

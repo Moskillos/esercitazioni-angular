@@ -10,20 +10,20 @@ import { CounterService } from '../counter.service';
   providers: [CounterService]
 })
 export class EditCounterComponent implements OnInit {
-  
-  number!: number;
-  
-  
-  constructor(private counterService: CounterService) { 
-    
+
+  number: number = 1;
+
+
+  constructor(private counterService: CounterService) {
+
   }
 
-  ngOnInit(): void {      
-    
+  ngOnInit(): void {
+
   }
-  
-  update(num: number){
-    this.counterService.update(num)
+
+  update(){
+    this.counterService.update(this.number)
   }
-  
+
 }
