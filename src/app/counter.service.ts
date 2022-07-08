@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 
 @Injectable({
@@ -7,16 +7,19 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CounterService {
   private counter: number = 0
+  counterSubject: BehaviorSubject<number> = new BehaviorSubject<number>(this.counter)
+  counter$ = this.counterSubject.asObservable()
 
   constructor() { }
 
-  get(): number{
-    return this.counter
+  get(): Observable<number>{
+    return this.counter$
   }
 
-  update(num: number = 1): void{
+  update(num: number): void{
     this.counter = num
-    console.log(this.counter)
+    this.counterSubject.next(this.counter)
+    console.log('update method in service',this.counter)
   }
 
 

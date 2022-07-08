@@ -1,13 +1,10 @@
-import { Component, ElementRef, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
-import { fromEvent, Observable, Subscription } from 'rxjs';
-
+import { Component, OnInit, } from '@angular/core';
 import { CounterService } from '../counter.service';
 
 @Component({
   selector: 'app-edit-counter',
   templateUrl: './edit-counter.component.html',
   styleUrls: ['./edit-counter.component.css'],
-  providers: [CounterService]
 })
 export class EditCounterComponent implements OnInit {
 
@@ -22,7 +19,7 @@ export class EditCounterComponent implements OnInit {
 
   }
 
-  update(){
+  update(): void{
     this.counterService.update(this.number)
   }
 
